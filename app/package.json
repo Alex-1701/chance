@@ -33,8 +33,7 @@
   "devDependencies": {
     "@electron/rebuild": "3.6.0",
     "electron": "31.0.0",
-    "electron-builder": "^24.13.3",
-    "electron-rebuild": "3.2.9"
+    "electron-builder": "^24.13.3"
   },
   "scripts": {
     "start-react": "cd src & react-scripts start",
@@ -42,11 +41,12 @@
     "build": "react-scripts build",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "dist-win": "electron-builder --win --x64",
+    "dist-win": "electron-builder --win",
     "dist-mac-arm64": "electron-builder --mac --arm64",
     "dist-mac-intel64": "electron-builder --mac --x64",
     "rebuild-mac": "./node_modules/.bin/electron-rebuild",
-    "rebuild-win": ".\\node_modules\\.bin\\electron-rebuild.cmd"
+    "rebuild-win": ".\\node_modules\\.bin\\electron-rebuild.cmd",
+    "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "appId": "kek.lol.propanol",
@@ -54,26 +54,18 @@
     "directories": {
       "output": "dist",
       "buildResources": "build"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": ["x64", "ia32"]
-        }
-      ]
-    },
-    "mac": {
-      "target": "dmg"
     }
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "postinstall": "electron-builder install-app-deps"
+  }
 }

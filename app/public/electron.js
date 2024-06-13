@@ -19,6 +19,13 @@ function createWindow() {
   mainWindow.webContents.openDevTools()
   
   mainWindow.setMenuBarVisibility(false);
+
+  Window.once('ready-to-show',function(){
+    console.log('sending window to load')
+    Window.show();
+    Window.webContents.send('loadWindow', 'WindowName');
+  });
+
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'
@@ -26,6 +33,8 @@ function createWindow() {
   );
   mainWindow.on('closed', () => (mainWindow = null));
 }
+
+app.commandLine.appendSwitch('disable-features', 'MediaFoundationAsyncH264Encoding')
 
 app.on('ready', createWindow);
 app.on('window-all-closed', () => {
