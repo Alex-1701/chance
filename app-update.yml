@@ -1,0 +1,4 @@
+owner: npismenkov
+repo: chance
+provider: github
+updaterCacheDirName: chance-updater
