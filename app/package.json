@@ -45,7 +45,8 @@
     "dist-win": "electron-builder --win --x64",
     "dist-mac-arm64": "electron-builder --mac --arm64",
     "dist-mac-intel64": "electron-builder --mac --x64",
-    "rebuild": "./node_modules/.bin/electron-rebuild"
+    "rebuild-mac": "./node_modules/.bin/electron-rebuild",
+    "rebuild-win": ".\\node_modules\\.bin\\electron-rebuild.cmd"
   },
   "build": {
     "appId": "kek.lol.propanol",
