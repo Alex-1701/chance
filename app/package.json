@@ -48,9 +48,11 @@
     "dist-win-arm64": "electron-builder --win --arm64",
     "dist-mac-arm64": "electron-builder --mac --arm64",
     "dist-mac-intel64": "electron-builder --mac --x64",
+    "rebuild-directly": "npm rebuild @pokusew/pcsclite --update-binary",
     "rebuild-mac": "./node_modules/.bin/electron-rebuild",
     "rebuild-win": ".\\node_modules\\.bin\\electron-rebuild.cmd",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "static-server": "node build/server/static.js"
   },
   "build": {
     "appId": "kek.lol.propanol",
@@ -61,11 +63,7 @@
     }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
