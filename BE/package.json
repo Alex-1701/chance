@@ -1,0 +1,55 @@
+{
+  "name": "chance-be",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start-react": "cd src & react-scripts start",
+    "start": "electron . --trace-warnings",
+    "build": "react-scripts build",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist-win": "electron-builder --win",
+    "dist-win-x64": "electron-builder --win --x64",
+    "dist-win-ia32": "electron-builder --win --ia32",
+    "dist-win-armv7l": "electron-builder --win --armv7l",
+    "dist-win-arm64": "electron-builder --win --arm64",
+    "dist-mac-arm64": "electron-builder --mac --arm64",
+    "dist-mac-intel64": "electron-builder --mac --x64",
+    "rebuild-directly": "npm rebuild @pokusew/pcsclite --update-binary",
+    "rebuild-mac": "./node_modules/.bin/electron-rebuild",
+    "rebuild-win": ".\\node_modules\\.bin\\electron-rebuild.cmd",
+    "postinstall": "electron-builder install-app-deps",
+    "static-server": "node build/server/static.js",
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "check": "biome check --write"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0",
+    "express": "^4.17.1",
+    "nfc-pcsc": "^0.8.1",
+    "rebuild": "^0.1.2",
+    "uuid": "^8.3.2",
+    "wait-on": "^5.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@electron/rebuild": "3.6.0",
+    "@types/node": "^12.0.0",
+    "@types/uuid": "^8.3.0",
+    "electron": "31.0.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.8.3"
+  },
+
+  "build": {
+    "appId": "kek.lol.propanol",
+    "productName": "chance",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    }
+  }
+}

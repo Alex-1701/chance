@@ -1,19 +1,19 @@
-import { Avatar, Badge, type Theme, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
-import { makeStyles, createStyles } from "@mui/styles";
-import type { UserI } from "../../App";
-import logo from "../../svg/icon.png";
+import { Avatar, Badge, type Theme, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { makeStyles, createStyles } from '@mui/styles';
+import type { UserI } from '../../App';
+import logo from '../../svg/icon.png';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapper: {
-      height: "60vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: "70vh",
-      backgroundColor: "rgba(255, 255, 255, 0.8)",
-      boxShadow: "0 0 10px 10px #fff",
+      height: '60vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '70vh',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      boxShadow: '0 0 10px 10px #fff',
     },
     img: {
       width: 250,
@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     flex: {
-      display: "flex",
+      display: 'flex',
     },
     rightBorder: {
-      borderRight: "2px solid black",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      borderRight: '2px solid black',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     info: {
       marginLeft: theme.spacing(2),
@@ -38,24 +38,24 @@ const useStyles = makeStyles((theme: Theme) =>
     standartItem: {
       width: 200,
       height: 50,
-      border: "2px solid black",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      border: '2px solid black',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     bigItem: {
       width: 185,
       height: 90,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     bigItemText: {
       fontSize: 30,
       margin: theme.spacing(1),
     },
     coin: {
-      border: "2px solid #000",
+      border: '2px solid #000',
     },
   }),
 );
@@ -67,20 +67,20 @@ interface Props {
 export function UserPage({ user }: Props) {
   const { classes } = useStyles();
 
-  const [color, setColor] = useState<string>("border-gradient-rare");
+  const [color, setColor] = useState<string>('border-gradient-rare');
 
   useEffect(() => {
     if (user.points < 1000) {
-      setColor("border-gradient-rare");
+      setColor('border-gradient-rare');
     }
     if (user.points >= 1000 && user.points < 2000) {
-      setColor("border-gradient-silver");
+      setColor('border-gradient-silver');
     }
     if (user.points >= 2000 && user.points < 3000) {
-      setColor("border-gradient-gold");
+      setColor('border-gradient-gold');
     }
     if (user.points >= 3000) {
-      setColor("border-gradient-top");
+      setColor('border-gradient-top');
     }
   }, [user.points]);
 

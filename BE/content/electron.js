@@ -13,16 +13,20 @@ let mainWindow;
 console.log(__dirname);
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 1000, height: 800, webPreferences: {
-    webSecurity: false
-  } });
-  mainWindow.webContents.openDevTools()
-  
+  mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 800,
+    webPreferences: {
+      webSecurity: false,
+    },
+  });
+  mainWindow.webContents.openDevTools();
+
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '/index.html')}`
+      : `file://${path.join(__dirname, '/index.html')}`,
   );
   mainWindow.on('closed', () => (mainWindow = null));
 }
@@ -36,4 +40,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-

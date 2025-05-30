@@ -1,25 +1,25 @@
-import { Chip, type Theme } from "@mui/material";
-import { makeStyles, createStyles } from "@mui/styles";
-import Reader from "../../svg/reader.svg";
+import { Chip, type Theme } from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
+import Reader from '../../svg/reader.svg';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapper: {
-      width: "60vh",
+      width: '60vh',
     },
     flex: {
-      width: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     chip: {
-      height: "40px",
+      height: '40px',
       fontSize: 15,
     },
     border: {
       margin: theme.spacing(2),
-      borderBottom: "2px solid #fff",
+      borderBottom: '2px solid #fff',
     },
   }),
 );

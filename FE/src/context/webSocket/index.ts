@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ws: WebSocket = new WebSocket(`ws://localhost:8000`);
 

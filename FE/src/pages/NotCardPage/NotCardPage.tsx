@@ -1,27 +1,27 @@
-import { Badge, Skeleton, type Theme } from "@mui/material";
-import { makeStyles, createStyles } from "@mui/styles";
+import { Badge, Skeleton, type Theme } from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapper: {
-      height: "60vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: "70vh",
-      backgroundColor: "rgba(255, 255, 255, 0.8)",
-      boxShadow: "0 0 10px 10px #fff",
+      height: '60vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '70vh',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      boxShadow: '0 0 10px 10px #fff',
     },
     img: {
       marginRight: theme.spacing(2),
     },
     flex: {
-      display: "flex",
+      display: 'flex',
     },
     rightBorder: {
-      borderRight: "2px solid black",
-      display: "flex",
-      alignItems: "center",
+      borderRight: '2px solid black',
+      display: 'flex',
+      alignItems: 'center',
     },
     info: {
       marginLeft: theme.spacing(2),
