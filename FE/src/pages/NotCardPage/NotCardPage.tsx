@@ -1,6 +1,7 @@
 import { Badge, Skeleton, type Theme } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapper: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: '0 0 10px 10px #fff',
     },
     img: {
-      marginRight: theme.spacing(2),
+      // marginRight: theme.spacing(2),
     },
     flex: {
       display: 'flex',
@@ -24,10 +25,10 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
     },
     info: {
-      marginLeft: theme.spacing(2),
+      // marginLeft: theme.spacing(2),
     },
     item: {
-      marginTop: theme.spacing(2),
+      // marginTop: theme.spacing(2),
     },
   }),
 );
@@ -40,7 +41,7 @@ export function NotCardPage() {
       <div className={classes.flex}>
         <div className={classes.rightBorder}>
           <Skeleton
-            variant="circle"
+            variant="circular"
             width={250}
             height={250}
             className={classes.img}
@@ -64,7 +65,7 @@ export function NotCardPage() {
           </div>
           <div className={classes.item}>
             <Badge badgeContent="Баланс" color="error">
-              <Skeleton variant="rect" width={200} height={90} />
+              <Skeleton variant="rectangular" width={200} height={90} />
             </Badge>
           </div>
         </div>

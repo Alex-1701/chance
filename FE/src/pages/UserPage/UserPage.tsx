@@ -1,8 +1,8 @@
 import { Avatar, Badge, type Theme, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { makeStyles, createStyles } from '@mui/styles';
-import type { UserI } from '../../App';
-import logo from '../../svg/icon.png';
+import type { User } from '../../App';
+import logo from '/icon.png';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     img: {
       width: 250,
       height: 250,
-      marginRight: theme.spacing(2),
+      // marginRight: theme.spacing(2),
     },
     flex: {
       display: 'flex',
@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     info: {
-      marginLeft: theme.spacing(2),
+      // marginLeft: theme.spacing(2),
     },
     item: {
-      marginTop: theme.spacing(2),
+      // marginTop: theme.spacing(2),
     },
     standartItem: {
       width: 200,
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     bigItemText: {
       fontSize: 30,
-      margin: theme.spacing(1),
+      // margin: theme.spacing(1),
     },
     coin: {
       border: '2px solid #000',
@@ -61,11 +61,11 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
-  user: UserI;
+  user: User;
 }
 
 export function UserPage({ user }: Props) {
-  const { classes } = useStyles();
+  const classes = useStyles();
 
   const [color, setColor] = useState<string>('border-gradient-rare');
 

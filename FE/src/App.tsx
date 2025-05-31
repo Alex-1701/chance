@@ -5,7 +5,7 @@ import { GetWSStatus } from './context/webSocket';
 import { NotCardPage, NotDevicePage, UserPage } from './pages';
 import { EditLayout } from './layouts/EditLayout/EditLayout';
 
-export interface UserI {
+export interface User {
   name: string;
   last_name: string;
   city: string;
@@ -16,7 +16,7 @@ export interface UserI {
 export function App() {
   const ws = GetWSStatus();
   const [status, setStatus] = useState<string>('disconnected');
-  const [user, setUser] = useState<UserI>({
+  const [user, setUser] = useState<User>({
     name: '',
     last_name: '',
     city: '',

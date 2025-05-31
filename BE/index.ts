@@ -1,9 +1,11 @@
-const WebSocket = require("ws");
-const express = require("express");
-const { WS_PORT, IMGS_PORT } = require("./config");
-const { NFC } = require("nfc-pcsc");
+import { WebSocketServer } from 'ws'
+import express from "express";
+import { WS_PORT, IMGS_PORT } from "./config.js";
+import { NFC } from "nfc-pcsc";
 
-const osUsername = require("os").userInfo().username;
+import os from "os";
+
+const osUsername = os.userInfo().username;
 
 console.log("osUsername:", osUsername);
 
@@ -21,14 +23,14 @@ app.listen(IMGS_PORT);
 
 const nfc = new NFC();
 
-const wsServer = new WebSocket.Server({ port: WS_PORT });
+const wsServer = new WebSocketServer({ port: WS_PORT });
 
 const client = {
   wsClient: null,
   status: null,
   user: null,
   initUser: async (reader) => {
-    let user = client.user;
+    const user = client.user;
     if (client.status === "reg_user" && client.user !== null) {
       try {
         const isUserReg = await initUser(JSON.stringify(client.user), reader);
@@ -146,7 +148,4 @@ nfc.on("reader", (reader) => {
   reader.on("end", () => sendStatus("connected"));
 });
 
-console.log("late");
-
-
-app.
+console.log("END_OF_FILE");

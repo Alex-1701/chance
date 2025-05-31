@@ -11,20 +11,20 @@
     "check": "biome check --write"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^7.1.0",
-    "@mui/styles": "^6.4.11",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@mui/material": "7.1.0",
+    "@mui/styles": "6.4.11",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.5.0",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "@vitejs/plugin-react": "4.5.0",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],

@@ -1,6 +1,6 @@
 import { Chip, type Theme } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
-import Reader from '../../svg/reader.svg';
+import Reader from '/reader.svg';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: 15,
     },
     border: {
-      margin: theme.spacing(2),
+      // margin: theme.spacing(2),
       borderBottom: '2px solid #fff',
     },
   }),
