@@ -145,8 +145,3 @@ nfc.on("reader", (reader) => {
   reader.on("error", (err) => sendStatus("error", err));
   reader.on("end", () => sendStatus("connected"));
 });
-
-console.log("late");
-
-
-app.
