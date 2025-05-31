@@ -23,7 +23,7 @@
     "nfc-pcsc": "^0.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "rebuild": "^0.1.2",
     "typescript": "^4.1.2",
     "uuid": "^8.3.2",
@@ -36,7 +36,9 @@
     "electron-builder": "^24.13.3"
   },
   "scripts": {
-    "start-react": "cd src & react-scripts start",
+    "start-all": "npm run start-node & npm run start-react",
+    "start-node": "node build/server/index.js",
+    "start-react": "FORCE_COLOR=true cd src & react-scripts start | cat",
     "start": "electron . --trace-warnings",
     "build": "react-scripts build",
     "pack": "electron-builder --dir",
